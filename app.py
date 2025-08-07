@@ -104,6 +104,7 @@ with abas[0]:
     """)
     image_path = os.path.join("dados", "mapa-areas.png")
     st.image(image_path, caption="Fonte: Do autor", use_container_width=True)
+    st.markdown("""Lembrete: aqui foram usados dados simulados simples para prova de conceito, mas a tecnologia utilizada (python) tem capacidade de fazer a interface com bases de dados reais, como bancos de dados, APIs, raspagem de dados, conjunto de arquivos excel/geojson/dbf locais ou em nuvem, dentre outras possibilidades.""")
 
 # Visão Geral
 with abas[1]:
