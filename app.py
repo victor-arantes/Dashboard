@@ -98,9 +98,9 @@ with abas[0]:
       - Visualizar a distribuição espacial dos talhões;
       - Visualizar indicadores como idade, volume, produtividade, taxa de sobrevivência, rendimento operacional e custo por talhão;
       - Explorar estatísticas e comparações entre as fazendas e talhões;
-      - Observar os dados em forma de tabela detalhada.
+      - Observar os dados em forma de tabela.
 
-      As informações aqui apresentadas visam demonstrar a prova de conceito e capacidade das bibliotecas de BI em ambiente de programação.
+      Mapa de localização das fazendas: \n\n\n\n
     """)
     image_path = os.path.join("dados", "mapa-areas.png")
     st.image(image_path, caption="Fonte: Do autor", use_container_width=True)
@@ -311,7 +311,7 @@ with abas[4]:
             .head(5)
             .reset_index(drop=True)
         )
-        melhores.index += 1  # Começar index em 1 para ficar mais amigável
+        melhores.index += 1
         st.table(melhores)
 with abas[5]:
     st.title("📄 Tabela de Talhões")
