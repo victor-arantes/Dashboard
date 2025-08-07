@@ -21,7 +21,9 @@ st.markdown("""
 # Carregar dados
 @st.cache_data
 def carregar_dados():
-    gdf = gpd.read_file("dados/talhoes.geojson")
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    path_geojson = os.path.join(BASE_DIR, "dados", "talhoes.geojson")
+    gdf = gpd.read_file(path_geojson)
     np.random.seed(42)
     gdf["idade"] = np.random.randint(1, 10, len(gdf))
     gdf["produtividade"] = np.random.uniform(15, 35, len(gdf))
